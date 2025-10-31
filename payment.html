@@ -1,0 +1,374 @@
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAYMENT ACKNOWLEDGEMENT FORM</title>
+<style>
+  body { font-family: Arial, sans-serif; font-size: 10pt; }
+  .container { width: 800px; margin: 20px auto; }
+  .header { display: flex; justify-content: space-between; margin-bottom: 20px; }
+  .company-info p { margin: 0; line-height: 1.4; color: #d60000; text-align: left; }
+  .form-title-group { text-align: right; }
+  .form-title { font-weight: bold; font-size: 14pt; border-bottom: 2px solid black; padding-bottom: 2px; margin-bottom: 10px; }
+  .form-details { display: grid; grid-template-columns: auto 1fr; gap: 5px 10px; text-align: left; }
+  .form-details label { font-weight: bold; }
+  .form-details input { border: none; border-bottom: 1px dotted black; width: 100%; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 10px; }
+  th, td { border: 1px solid black; padding: 5px; text-align: left; }
+  th { font-weight: bold; }
+  .main-table input { width: 100%; border: none; }
+  .footer-tables { display: flex; justify-content: space-between; margin-bottom: 20px; }
+  .footer-tables table { width: 48%; }
+  .footer-info { display: flex; justify-content: space-between; font-size: 9pt; }
+  .submit-btn {
+    background: linear-gradient(#d60000, #d60000, #d60000);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    display: inline-block;
+  }
+  .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.2); }
+  .submit-btn:active { transform: scale(0.98); box-shadow: 0 3px 6px rgba(0,0,0,0.2); }
+</style>
+
+
+    <form id="paymentForm">
+    <div class="container">
+        <div id="stage-identifier" style="background-color: #f0f0f0; padding: 10px; margin-bottom: 20px; text-align: center; font-weight: bold; border-radius: 5px;">
+            Current Stage: Reviewed by
+        </div>
+        <div class="header">
+            <div class="company-info">
+                <img src="data:image/webp;base64,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" alt="PSI Engineering Logo" style="width: 150px;" loading="lazy">
+                <p></p>Block A, Level 3, Nakawa Business Park,</p>
+                <p>Plot 3-7, New Port Bell Road, Nakawa</p>
+                <p>P. O. Box 100682, Kampala, Uganda</p>
+                <p><a href="mailto:info@psiengineering.co.ug">info@psiengineering.co.ug</a></p>
+                <p>Tel: +256-771-577-190</p>
+            </div>
+            <div class="form-title-group">
+                <h2 class="form-title">PAYMENT ACKNOWLEDGEMENT FORM</h2>
+                <div class="form-details">
+                    <label for="date">Date:</label>
+                    <input type="text" id="date" name="date">
+                    <label for="site-name">Site Name:</label>
+                    <input type="text" id="site-name" name="site-name">
+                    <label for="site-id">Site ID:</label>
+                    <input type="text" id="site-id" name="site-id">
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location">
+                </div>
+            </div>
+        </div>
+
+        <table class="main-table">
+            <thead>
+                <tr>
+                    <th>S/N</th>
+                    <th>Payee Name</th>
+                    <th>Description</th>
+                    <th>Amount</th>
+                    <th>Payment Method</th>
+                    <th>Contact</th>
+                    <th>Signature</th>
+                </tr>
+            </thead>
+            <tbody id="payment-rows"></tbody>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const tbody = document.getElementById("payment-rows");
+
+    // ✅ Prevent re-generation
+    if (!tbody || tbody.dataset.built === "true") return;
+    tbody.dataset.built = "true";
+
+    for (let i = 1; i <= 10; i++) {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${i}.</td>
+        <td><input type="text" name="payee_name_${i}"></td>
+        <td><textarea name="description_${i}" rows="1"></textarea></td>
+        <td><input type="text" name="amount_${i}"></td>
+        <td><input type="text" name="payment_method_${i}"></td>
+        <td><input type="text" name="contact_${i}"></td>
+        <td><input type="text" name="signature_${i}"></td>
+      `;
+      tbody.appendChild(row);
+    }
+  });
+</script>
+
+
+            
+        </table>
+
+        <div class="footer-tables">
+           <table>
+  <tbody>
+    <tr><th colspan="2">Reviewed By</th></tr>
+    <tr>
+      <td>Name</td>
+      <td><textarea name="reviewed_by_name" rows="1" style="width:100%; border:none; resize: none; overflow: hidden;"></textarea></td>
+    </tr>
+    <tr>
+      <td>Contact</td>
+      <td><textarea name="reviewed_by_contact" rows="1" style="width:100%; border:none; resize: none; overflow: hidden;"></textarea></td>
+    </tr>
+    <tr>
+      <td>Signature</td>
+      <td><textarea name="reviewed_by_sign" rows="1" style="width:100%; border:none; resize: none; overflow: hidden;"></textarea></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr><th colspan="2">Paid By</th></tr>
+    <tr>
+      <td>Name</td>
+      <td><textarea name="paid_by_name" rows="1" style="width:100%; border:none; resize: none; overflow: hidden;"></textarea></td>
+    </tr>
+    <tr>
+      <td>Contact</td>
+      <td><textarea name="paid_by_contact" rows="1" style="width:100%; border:none; resize: none; overflow: hidden;"></textarea></td>
+    </tr>
+    <tr>
+      <td>Signature</td>
+      <td><textarea name="paid_by_sign" rows="1" style="width:100%; border:none; resize: none; overflow: hidden;"></textarea></td>
+    </tr>
+  </tbody>
+</table>
+
+            
+        </div>
+
+        <div class="email-section" style="margin-top: 20px; text-align: center;">
+            <label for="payer-email" style="font-weight: bold;">Email to Payer:</label>
+            <input type="email" id="payer-email" name="payer-email" style="width: 300px; padding: 8px; margin-right: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            <button id="send-link-button" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;">Send Payment Link</button>
+        </div>
+
+        <div class="footer-info">
+            <span>Doc No: PSI-R-051-PP</span>
+            <span>Rev 00</span>
+            <span>Issue Date: 04/01/2021</span>
+        </div>
+    </div>
+</form>
+
+<button type="button" class="submit-btn" onclick="submitPaymentForm()">Submit &amp; Email PDF</button>
+
+<script>
+const form = document.getElementById("paymentForm");
+const stageIdentifier = document.getElementById("stage-identifier");
+const payerEmailField = document.getElementById("payer-email");
+const sendLinkButton = document.getElementById("send-link-button");
+const submitButton = document.querySelector(".submit-btn"); // The final submit button
+
+// ✅ Detect token in URL
+const urlParams = new URLSearchParams(window.location.search);
+const token = urlParams.get("token");
+
+if (token) {
+  // Stage 2 (payer)
+  stageIdentifier.textContent = "Current Stage: Payment in Progress";
+  payerEmailField.style.display = "none";
+  sendLinkButton.style.display = "none";
+  submitButton.style.display = "inline-block"; // show submit button only at final stage
+
+  // Prefill data
+  fetch(`https://formspsi.onrender.com/get-form/payment/${token}`)
+    .then(res => res.json())
+    .then(data => {
+      if (!data.formData) return;
+      Object.entries(data.formData).forEach(([key, value]) => {
+        const input = document.querySelector(`[name="${key}"]`);
+        if (input) {
+          input.value = value;
+          // ✅ Make prefilled fields readonly
+          if (value.trim()) {
+            input.setAttribute("readonly", "true");
+            input.style.backgroundColor = "#f0f0f0"; // optional styling for clarity
+          }
+        }
+      });
+    })
+    .catch(err => console.error("Prefill error:", err));
+} else {
+  // Stage 1 (reviewer)
+  stageIdentifier.textContent = "Current Stage: Reviewed by";
+  submitButton.style.display = "none"; // hide submit button
+}
+
+// ✅ Send payment link (Stage 1)
+sendLinkButton.addEventListener("click", async (e) => {
+  e.preventDefault();
+  const email = payerEmailField.value.trim();
+  if (!email) return alert("Please enter payer email");
+
+  const formData = {};
+  document.querySelectorAll("#paymentForm input").forEach((input) => {
+    formData[input.name] = input.value;
+  });
+
+  try {
+    const res = await fetch("https://formspsi.onrender.com/send-form-link", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ stage: "payment", email, formData }),
+    });
+    const data = await res.json();
+    alert(data.message || "Payment link sent!");
+  } catch (err) {
+    console.error("Error sending link:", err);
+    alert("Error sending payment link");
+  }
+});
+
+// ✅ Submit & Email PDF (Stage 2)
+async function submitPaymentForm() {
+  // Disable button + show loading state
+  submitButton.disabled = true;
+  const originalText = submitButton.textContent;
+  submitButton.textContent = "Generating PDF...";
+
+  const clone = form.cloneNode(true);
+
+  // Remove buttons & stage identifier
+  clone.querySelectorAll("button").forEach(btn => btn.remove());
+  const stageEl = clone.querySelector("#stage-identifier");
+  if (stageEl) stageEl.remove();
+
+  // Replace inputs with spans
+  clone.querySelectorAll("input, textarea").forEach(field => {
+    const span = document.createElement("span");
+    span.textContent = field.value.trim() || "";
+    span.style.whiteSpace = "pre-wrap"; /* Preserve whitespace and allow wrapping */
+    span.style.wordBreak = "break-word"; /* Break long words */
+    span.style.display = "block"; /* Ensure block display for line breaks */
+    span.style.minHeight = `${field.offsetHeight}px`; /* Maintain original field height */
+    span.style.width = `${field.offsetWidth}px`; /* Maintain original field width */
+    field.parentNode.replaceChild(span, field);
+  });
+
+  // Collect CSS
+  let allCSS = "";
+  try {
+    allCSS = Array.from(document.styleSheets)
+      .map(s => {
+        try { return Array.from(s.cssRules).map(r => r.cssText).join("\n"); }
+        catch(e) { return ""; }
+      })
+      .join("\n");
+  } catch (err) { console.warn("Could not load all CSS", err); }
+
+  // ... inside submitPaymentForm function ...
+
+  const htmlContentFull = `
+ <!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset="UTF-8">
+ <title>Payment Acknowledgement Form</title>
+ <style>
+ ${allCSS}
+ 
+ /* === AGGRESSIVE PDF OVERRIDES FOR SCREEN-FIT === */
+ 
+ /* 1. Remove all print margins and set fixed size to auto */
+ @page { 
+    margin: 0 !important; 
+    size: auto !important; 
+} 
+ /* 2. Universal reset for print styling */
+ * { 
+    -webkit-print-color-adjust: exact !important; 
+    color-adjust: exact !important; 
+    print-color-adjust: exact !important; 
+    margin: 0 !important; 
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+ /* 3. Ensure HTML/Body/Form do not add any size/margin */
+ html, body { 
+    width: auto !important; 
+    height: auto !important;
+    margin: 0 !important; 
+    padding: 0 !important;
+    overflow: visible !important;
+    background: #fff !important; 
+    color: #000 !important; 
+    font-family: Arial, sans-serif !important;
+}
+
+ /* 💥 CRITICAL CHANGE: Apply proportional scaling to the form */
+ #paymentForm { 
+    /* Scales the entire form content by 20% (1.2 times original size) */
+    transform: scale(1.2); 
+    /* Ensures the scaling is applied from the top-left corner */
+    transform-origin: top left;
+    
+    /* Ensure no original margins interfere */
+    margin: 0 !important; 
+    padding: 0 !important; 
+    width: max-content; /* Allows content to dictate width */
+    min-height: 100vh; /* Ensures content is not cut short */
+} 
+ </style>
+ </head>
+ <body>
+ ${clone.innerHTML} 
+ </body>
+ </html>
+ `;
+
+
+  // ✅ Ask for email to send PDF to (default if blank)
+  let sendToEmail = prompt("Enter email to send PDF to:", "darrell.bakwega@psiengineering.co.ug");
+  if (!sendToEmail) sendToEmail = "darrell.bakwega@psiengineering.co.ug";
+
+  try {
+    const res = await fetch("https://formspsi.onrender.com/generate-pdf", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ htmlContent: htmlContentFull, email: sendToEmail })
+    });
+    const data = await res.json();
+    alert(data.message);
+  } catch (err) {
+    console.error("Error:", err);
+    alert("Something went wrong while submitting the form.");
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = originalText;
+  }
+}
+
+// ✅ Generate exactly 10 table rows (prevent duplicates)
+document.addEventListener("DOMContentLoaded", () => {
+  const tbody = document.querySelector("#payment-rows");
+  if (!tbody) return;
+  tbody.innerHTML = "";
+  for (let i = 1; i <= 10; i++) {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td>${i}.</td>
+      <td><input type="text" name="payee_name_${i}"></td>
+      <td><textarea name="description_${i}" rows="1"></textarea></td>
+      <td><input type="text" name="amount_${i}"></td>
+      <td><input type="text" name="payment_method_${i}"></td>
+      <td><input type="text" name="contact_${i}"></td>
+      <td><input type="text" name="signature_${i}"></td>
+    `;
+    tbody.appendChild(row);
+  }
+});
+</script>
